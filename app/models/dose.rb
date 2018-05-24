@@ -5,5 +5,5 @@ class Dose < ApplicationRecord
   validates :description, uniqueness: true, presence: true
   validates :cocktail, presence: true
   validates :ingredient, presence: true
-  validates [:cocktail, :ingredient], uniqueness: true
+  add_index :cocktail_ingredients, [:cocktail_id, :ingredient_id], unique: true
 end
