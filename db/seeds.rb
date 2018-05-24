@@ -19,7 +19,7 @@ cocktail_ingredient = JSON.parse(buffer);
 ingredient_array = cocktail_ingredient["drinks"];
 
 
-ingredient_array.each |ingredient| do
+ingredient_array.each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
 
