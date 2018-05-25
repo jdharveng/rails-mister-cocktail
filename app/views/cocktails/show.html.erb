@@ -6,6 +6,7 @@
       data: { confirm: "Are you sure?" } do %>
       <i class="far fa-trash-alt"></i>
   <% end  %>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <% end %>
 </ul>
 
